@@ -1,0 +1,8 @@
+{
+  "name": "CloudLinux 7 Server Full",
+  "distro": "cloudlinux",
+  "base_url": "https://cl-mirror.elitehost.co.za/swng/cloudlinux-x86_64-server-7",
+  "branch_or_suite": "7",
+  "component": "server",
+  "arch": "x86_64"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Arch Linux Multilib",
+  "distro": "arch",
+  "base_url": "https://geo.mirror.pkgbuild.com",
+  "branch_or_suite": "multilib",
+  "component": "multilib",
+  "arch": "x86_64"
+}

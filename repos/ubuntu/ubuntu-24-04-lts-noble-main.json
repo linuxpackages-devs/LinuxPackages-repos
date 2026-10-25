@@ -1,0 +1,8 @@
+{
+  "name": "Ubuntu 24.04 LTS (Noble) Main",
+  "distro": "ubuntu",
+  "base_url": "http://archive.ubuntu.com/ubuntu",
+  "branch_or_suite": "noble",
+  "component": "main",
+  "arch": "amd64"
+}

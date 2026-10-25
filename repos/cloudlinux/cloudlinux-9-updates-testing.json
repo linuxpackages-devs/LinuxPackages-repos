@@ -1,0 +1,8 @@
+{
+  "name": "CloudLinux 9 Updates Testing",
+  "distro": "cloudlinux",
+  "base_url": "https://repo.cloudlinux.com/cloudlinux/9/updates-testing/x86_64",
+  "branch_or_suite": "9",
+  "component": "updates-testing",
+  "arch": "x86_64"
+}

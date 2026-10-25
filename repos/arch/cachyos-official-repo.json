@@ -1,0 +1,8 @@
+{
+  "name": "CachyOS Official Repo",
+  "distro": "arch",
+  "base_url": "https://mirror.cachyos.org/repo/x86_64/cachyos",
+  "branch_or_suite": "cachyos",
+  "component": "cachyos",
+  "arch": "x86_64"
+}

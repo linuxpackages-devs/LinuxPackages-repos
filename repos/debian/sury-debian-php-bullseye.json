@@ -1,0 +1,8 @@
+{
+  "name": "Sury Debian PHP (Bullseye)",
+  "distro": "debian",
+  "base_url": "https://packages.sury.org/php",
+  "branch_or_suite": "bullseye",
+  "component": "main",
+  "arch": "amd64"
+}

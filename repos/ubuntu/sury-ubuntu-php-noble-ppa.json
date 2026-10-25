@@ -1,0 +1,8 @@
+{
+  "name": "Sury Ubuntu PHP (Noble PPA)",
+  "distro": "ubuntu",
+  "base_url": "https://ppa.launchpadcontent.net/ondrej/php/ubuntu",
+  "branch_or_suite": "noble",
+  "component": "main",
+  "arch": "amd64"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "CloudLinux 7 OS",
+  "distro": "cloudlinux",
+  "base_url": "https://repo.cloudlinux.com/cloudlinux/7/os/x86_64",
+  "branch_or_suite": "7",
+  "component": "os",
+  "arch": "x86_64"
+}

@@ -8,24 +8,44 @@ This repository contains the curated list of Linux software repositories indexed
 
 ## 🚀 How It Works
 
-Instead of uncontrolled in-app submissions, all Linux package repositories indexed by LinuxPackages are maintained here under version control.
+Instead of uncontrolled in-app submissions or a single monolithic file, all Linux package repositories indexed by LinuxPackages are maintained in modular files organized by operating system:
 
-1. Anyone in the community can propose a new repository by submitting a **Pull Request**.
+```
+repos/
+  ├── debian/          # Debian repositories (.json)
+  ├── ubuntu/          # Ubuntu repositories & PPAs (.json)
+  ├── arch/            # Arch Linux & AUR (.json)
+  ├── alpine/          # Alpine Linux APKINDEX repositories (.json)
+  └── cloudlinux/      # CloudLinux & RPM repomd repositories (.json)
+```
+
+1. Anyone in the community can propose a new repository by adding a single JSON file under `repos/<distro>/<repo-name>.json` and submitting a **Pull Request**.
 2. Automated GitHub Actions validate the configuration syntax and test repository index accessibility.
 3. Once reviewed and merged by maintainers, the **LinuxPackages** indexing engine automatically discovers the new repository and begins indexing all its packages!
 
 ---
 
-## 📦 Repository Catalog
+## 📦 Repository Definition Format
 
-All repositories are cataloged in [`repositories.json`](./repositories.json).
+Each repository is defined in its own file under `repos/<distro>/`:
 
-Each repository entry defines:
-- `name`: Human-readable name of the repository (e.g. `Debian 12 Bookworm Main`).
+```json
+{
+  "name": "NGINX Official Stable (Debian Bookworm)",
+  "distro": "debian",
+  "base_url": "http://nginx.org/packages/debian",
+  "branch_or_suite": "bookworm",
+  "component": "nginx",
+  "arch": "amd64"
+}
+```
+
+Fields:
+- `name`: Human-readable name of the repository.
 - `distro`: Distribution family (`debian`, `ubuntu`, `arch`, `alpine`, or `cloudlinux`).
 - `base_url`: Base mirror URL or repository root.
 - `branch_or_suite`: Suite or release branch name (e.g. `bookworm`, `noble`, `core`, `v3.20/main`).
-- `component`: Component name (e.g. `main`, `extra`, `community`).
+- `component`: Component name (e.g. `main`, `extra`, `community`, `nginx`).
 - `arch`: Architecture (e.g. `amd64`, `x86_64`, `aarch64`).
 
 ---
@@ -35,12 +55,13 @@ Each repository entry defines:
 To add a new repository:
 
 1. **Fork** this repository.
-2. Edit `repositories.json` and append your repository definition.
-3. Ensure all URLs and required fields are accurate.
-4. **Open a Pull Request** describing the repository, its purpose, and any verification steps.
-5. Once your PR is reviewed and approved, it will be merged into `main` and automatically picked up by LinuxPackages!
+2. Create a new `.json` file in `repos/<distro>/<your-repo-name>.json`.
+3. Fill in the repository details following the schema.
+4. Run `node build.js` to compile the manifest (optional; CI compiles automatically).
+5. **Open a Pull Request** describing the repository and its purpose.
+6. Once merged into `main`, LinuxPackages will automatically index your repository!
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines and examples.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed guidelines.
 
 ---
 

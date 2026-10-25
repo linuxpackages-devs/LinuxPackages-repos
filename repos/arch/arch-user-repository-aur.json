@@ -1,0 +1,8 @@
+{
+  "name": "Arch User Repository (AUR)",
+  "distro": "arch",
+  "base_url": "https://aur.archlinux.org",
+  "branch_or_suite": "aur",
+  "component": "aur",
+  "arch": "x86_64"
+}

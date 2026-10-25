@@ -1,0 +1,8 @@
+{
+  "name": "NGINX Official Mainline (Ubuntu Noble)",
+  "distro": "ubuntu",
+  "base_url": "http://nginx.org/packages/mainline/ubuntu",
+  "branch_or_suite": "noble",
+  "component": "nginx",
+  "arch": "amd64"
+}

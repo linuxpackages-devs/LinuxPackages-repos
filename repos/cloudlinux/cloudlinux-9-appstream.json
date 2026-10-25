@@ -1,0 +1,8 @@
+{
+  "name": "CloudLinux 9 AppStream",
+  "distro": "cloudlinux",
+  "base_url": "https://repo.cloudlinux.com/cloudlinux/9/AppStream/x86_64/os",
+  "branch_or_suite": "9",
+  "component": "AppStream",
+  "arch": "x86_64"
+}

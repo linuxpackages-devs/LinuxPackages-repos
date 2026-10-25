@@ -4,6 +4,18 @@ Thank you for helping expand LinuxPackages! We welcome repository additions from
 
 ---
 
+## Directory Organization
+
+Repositories are organized in dedicated folders by Linux distribution:
+
+- `repos/debian/`: Debian distributions and third-party Debian repositories
+- `repos/ubuntu/`: Ubuntu releases, PPAs, and external Ubuntu repositories
+- `repos/arch/`: Arch Linux official repositories and AUR
+- `repos/alpine/`: Alpine Linux release branches and edge
+- `repos/cloudlinux/`: CloudLinux OS releases and RPM repomd repositories
+
+---
+
 ## Submission Guidelines
 
 ### 1. Requirements for Added Repositories
@@ -12,7 +24,7 @@ Thank you for helping expand LinuxPackages! We welcome repository additions from
 - The repository must not contain malicious software or security hazards.
 
 ### 2. Format
-Add your repository entry to the `repositories` array in `repositories.json`:
+Create a new JSON file named after your repository (e.g., `repos/debian/my-custom-repo.json`):
 
 ```json
 {
@@ -26,9 +38,9 @@ Add your repository entry to the `repositories` array in `repositories.json`:
 ```
 
 ### 3. Review Process
-1. **Automated CI Check**: GitHub Actions will automatically run validation on your PR to verify:
-   - JSON syntax is correct.
-   - All required fields (`name`, `distro`, `base_url`, `arch`) are present.
-   - The repository index endpoint is reachable.
+1. **Automated CI Check**: GitHub Actions will automatically run validation on your PR:
+   - Validates JSON format and ensures file is in the matching `repos/<distro>/` folder.
+   - Validates all required fields (`name`, `distro`, `base_url`, `arch`).
+   - Verifies reachability of the index endpoint.
 2. **Peer Review**: A maintainer will review the PR for security, appropriateness, and deduplication.
 3. **Merge**: Once approved, your PR will be merged into `main`. The LinuxPackages engine will automatically sync and index packages within the next sync cycle.

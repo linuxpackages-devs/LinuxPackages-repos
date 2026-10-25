@@ -1,0 +1,8 @@
+{
+  "name": "Alpine Linux v3.20 Main",
+  "distro": "alpine",
+  "base_url": "https://dl-cdn.alpinelinux.org/alpine",
+  "branch_or_suite": "v3.20/main",
+  "component": "main",
+  "arch": "x86_64"
+}

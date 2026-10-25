@@ -1,0 +1,8 @@
+{
+  "name": "Sury Debian Apache2 (Bookworm)",
+  "distro": "debian",
+  "base_url": "https://packages.sury.org/apache2",
+  "branch_or_suite": "bookworm",
+  "component": "main",
+  "arch": "amd64"
+}

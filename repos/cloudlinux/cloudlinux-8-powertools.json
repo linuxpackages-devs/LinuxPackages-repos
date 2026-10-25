@@ -1,0 +1,8 @@
+{
+  "name": "CloudLinux 8 PowerTools",
+  "distro": "cloudlinux",
+  "base_url": "https://repo.cloudlinux.com/cloudlinux/8/PowerTools/x86_64/os",
+  "branch_or_suite": "8",
+  "component": "PowerTools",
+  "arch": "x86_64"
+}

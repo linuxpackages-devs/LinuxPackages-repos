@@ -1,0 +1,8 @@
+{
+  "name": "Sury Debian PHP (Bookworm)",
+  "distro": "debian",
+  "base_url": "https://packages.sury.org/php",
+  "branch_or_suite": "bookworm",
+  "component": "main",
+  "arch": "amd64"
+}

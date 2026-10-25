@@ -1,0 +1,8 @@
+{
+  "name": "NGINX Official (RHEL/CloudLinux 9)",
+  "distro": "cloudlinux",
+  "base_url": "http://nginx.org/packages/rhel/9/x86_64",
+  "branch_or_suite": "9",
+  "component": "nginx",
+  "arch": "x86_64"
+}

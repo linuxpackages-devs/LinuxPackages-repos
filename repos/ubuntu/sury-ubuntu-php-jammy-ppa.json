@@ -1,0 +1,8 @@
+{
+  "name": "Sury Ubuntu PHP (Jammy PPA)",
+  "distro": "ubuntu",
+  "base_url": "https://ppa.launchpadcontent.net/ondrej/php/ubuntu",
+  "branch_or_suite": "jammy",
+  "component": "main",
+  "arch": "amd64"
+}

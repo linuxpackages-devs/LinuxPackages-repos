@@ -1,0 +1,8 @@
+{
+  "name": "NGINX Official Stable (Debian Bookworm)",
+  "distro": "debian",
+  "base_url": "http://nginx.org/packages/debian",
+  "branch_or_suite": "bookworm",
+  "component": "nginx",
+  "arch": "amd64"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Arch Linux Extra",
+  "distro": "arch",
+  "base_url": "https://geo.mirror.pkgbuild.com",
+  "branch_or_suite": "extra",
+  "component": "extra",
+  "arch": "x86_64"
+}
