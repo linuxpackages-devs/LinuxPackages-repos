@@ -1,0 +1,8 @@
+{
+  "name": "AlmaLinux 8 HighAvailability",
+  "distro": "almalinux",
+  "base_url": "https://repo.almalinux.org/almalinux/8/HighAvailability/x86_64/os",
+  "branch_or_suite": "8",
+  "component": "HighAvailability",
+  "arch": "x86_64"
+}

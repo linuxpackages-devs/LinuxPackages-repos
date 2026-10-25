@@ -12,6 +12,7 @@ Repositories are organized in dedicated folders by Linux distribution:
 - `repos/ubuntu/`: Ubuntu releases, PPAs, and external Ubuntu repositories
 - `repos/arch/`: Arch Linux official repositories and AUR
 - `repos/alpine/`: Alpine Linux release branches and edge
+- `repos/almalinux/`: AlmaLinux OS official repositories
 - `repos/cloudlinux/`: CloudLinux OS releases and RPM repomd repositories
 
 ---

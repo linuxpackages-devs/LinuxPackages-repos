@@ -1,0 +1,8 @@
+{
+  "name": "AlmaLinux 9 AppStream",
+  "distro": "almalinux",
+  "base_url": "https://repo.almalinux.org/almalinux/9/AppStream/x86_64/os",
+  "branch_or_suite": "9",
+  "component": "AppStream",
+  "arch": "x86_64"
+}

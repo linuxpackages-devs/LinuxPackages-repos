@@ -42,7 +42,8 @@
               "ubuntu",
               "arch",
               "alpine",
-              "cloudlinux"
+              "cloudlinux",
+              "almalinux"
             ]
           },
           "base_url": {

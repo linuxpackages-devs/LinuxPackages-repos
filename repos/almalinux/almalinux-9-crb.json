@@ -1,0 +1,8 @@
+{
+  "name": "AlmaLinux 9 CRB",
+  "distro": "almalinux",
+  "base_url": "https://repo.almalinux.org/almalinux/9/CRB/x86_64/os",
+  "branch_or_suite": "9",
+  "component": "CRB",
+  "arch": "x86_64"
+}

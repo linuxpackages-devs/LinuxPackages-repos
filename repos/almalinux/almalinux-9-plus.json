@@ -1,0 +1,8 @@
+{
+  "name": "AlmaLinux 9 Plus",
+  "distro": "almalinux",
+  "base_url": "https://repo.almalinux.org/almalinux/9/plus/x86_64/os",
+  "branch_or_suite": "9",
+  "component": "plus",
+  "arch": "x86_64"
+}

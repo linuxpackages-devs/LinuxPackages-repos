@@ -1,0 +1,8 @@
+{
+  "name": "AlmaLinux 8 BaseOS",
+  "distro": "almalinux",
+  "base_url": "https://repo.almalinux.org/almalinux/8/BaseOS/x86_64/os",
+  "branch_or_suite": "8",
+  "component": "BaseOS",
+  "arch": "x86_64"
+}
