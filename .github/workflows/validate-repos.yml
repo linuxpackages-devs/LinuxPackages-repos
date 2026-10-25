@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -21,4 +23,21 @@ jobs:
       - name: Validate and Build Catalog
         run: |
           node build.js
-          git diff --exit-code index.json || (echo "Warning: index.json was not updated. Please run 'node build.js'." && exit 1)
+
+      - name: Verify Index Diff on PR
+        if: github.event_name == 'pull_request'
+        run: |
+          git diff -I '"updated_at":' --exit-code index.json || (echo "Warning: index.json has repository differences. Please run 'node build.js' and commit the changes." && exit 1)
+
+      - name: Auto-commit updated index.json on main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if [[ -n $(git status -s index.json) ]]; then
+            git add index.json
+            git commit -m "chore(manifest): auto-update compiled index.json [skip ci]"
+            git push
+          else
+            echo "index.json is already up-to-date."
+          fi

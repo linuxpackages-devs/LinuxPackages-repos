@@ -43,15 +43,28 @@ compiledRepos.sort((a, b) => {
     return a.name.localeCompare(b.name);
 });
 
+const indexPath = path.join(__dirname, 'index.json');
+let updatedAt = new Date().toISOString();
+
+if (fs.existsSync(indexPath)) {
+    try {
+        const existing = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
+        if (JSON.stringify(existing.repositories) === JSON.stringify(compiledRepos)) {
+            // Keep previous timestamp if catalog content has not changed (idempotent builds)
+            updatedAt = existing.updated_at || updatedAt;
+        }
+    } catch {}
+}
+
 const manifest = {
     $schema: './schema.json',
     version: 1,
     description: 'LinuxPackages Official & Community Repositories Compiled Manifest',
-    updated_at: new Date().toISOString(),
+    updated_at: updatedAt,
     total_repositories: compiledRepos.length,
     repositories: compiledRepos
 };
 
-fs.writeFileSync(path.join(__dirname, 'index.json'), JSON.stringify(manifest, null, 2) + '\n', 'utf8');
+fs.writeFileSync(indexPath, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
 
 console.log(`Successfully compiled ${compiledRepos.length} repositories across ${distros.length} distributions into index.json.`);
