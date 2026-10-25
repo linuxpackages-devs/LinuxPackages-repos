@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LinuxPackagesRepositories",
+  "type": "object",
+  "required": [
+    "version",
+    "repositories"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "repositories": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "distro",
+          "base_url",
+          "arch"
+        ],
+        "properties": {
+          "name": {
+            "type": "string",
+            "minLength": 3
+          },
+          "distro": {
+            "type": "string",
+            "enum": [
+              "debian",
+              "ubuntu",
+              "arch",
+              "alpine",
+              "cloudlinux"
+            ]
+          },
+          "base_url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "branch_or_suite": {
+            "type": "string"
+          },
+          "component": {
+            "type": "string"
+          },
+          "arch": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

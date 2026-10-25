@@ -1,0 +1,52 @@
+name: Validate Repositories Catalog
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate repositories.json
+        run: |
+          node -e '
+            const fs = require("fs");
+            const data = JSON.parse(fs.readFileSync("repositories.json", "utf8"));
+            if (!data.repositories || !Array.isArray(data.repositories)) {
+              console.error("Invalid repositories.json: missing repositories array");
+              process.exit(1);
+            }
+            const allowedDistros = ["debian", "ubuntu", "arch", "alpine", "cloudlinux"];
+            let errors = 0;
+            const names = new Set();
+            data.repositories.forEach((repo, idx) => {
+              if (!repo.name || !repo.distro || !repo.base_url || !repo.arch) {
+                console.error(`Repo #${idx} is missing required fields:`, repo);
+                errors++;
+              }
+              if (!allowedDistros.includes(repo.distro)) {
+                console.error(`Repo "${repo.name}" has invalid distro: ${repo.distro}`);
+                errors++;
+              }
+              if (names.has(repo.name.toLowerCase())) {
+                console.warn(`Warning: Duplicate repo name "${repo.name}"`);
+              }
+              names.add(repo.name.toLowerCase());
+            });
+            if (errors > 0) {
+              console.error(`Validation failed with ${errors} error(s).`);
+              process.exit(1);
+            }
+            console.log(`Successfully validated ${data.repositories.length} repositories.`);
+          '

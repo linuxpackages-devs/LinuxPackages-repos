@@ -1,0 +1,232 @@
+{
+  "$schema": "./schema.json",
+  "version": 1,
+  "description": "LinuxPackages Official & Community Repositories Catalog",
+  "updated_at": "2026-10-25T14:08:24.805Z",
+  "repositories": [
+    {
+      "name": "Alpine Linux v3.20 Main",
+      "distro": "alpine",
+      "base_url": "https://dl-cdn.alpinelinux.org/alpine",
+      "branch_or_suite": "v3.20/main",
+      "component": "main",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Alpine Linux v3.20 Community",
+      "distro": "alpine",
+      "base_url": "https://dl-cdn.alpinelinux.org/alpine",
+      "branch_or_suite": "v3.20/community",
+      "component": "community",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Arch Linux Core",
+      "distro": "arch",
+      "base_url": "https://geo.mirror.pkgbuild.com",
+      "branch_or_suite": "core",
+      "component": "core",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Arch Linux Extra",
+      "distro": "arch",
+      "base_url": "https://geo.mirror.pkgbuild.com",
+      "branch_or_suite": "extra",
+      "component": "extra",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Arch Linux Multilib",
+      "distro": "arch",
+      "base_url": "https://geo.mirror.pkgbuild.com",
+      "branch_or_suite": "multilib",
+      "component": "multilib",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Arch Linux Extra Testing",
+      "distro": "arch",
+      "base_url": "https://geo.mirror.pkgbuild.com",
+      "branch_or_suite": "extra-testing",
+      "component": "extra-testing",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Arch Linux Multilib Testing",
+      "distro": "arch",
+      "base_url": "https://geo.mirror.pkgbuild.com",
+      "branch_or_suite": "multilib-testing",
+      "component": "multilib-testing",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Debian 12 Bookworm Main",
+      "distro": "debian",
+      "base_url": "http://deb.debian.org/debian",
+      "branch_or_suite": "bookworm",
+      "component": "main",
+      "arch": "amd64"
+    },
+    {
+      "name": "Ubuntu 24.04 LTS (Noble) Main",
+      "distro": "ubuntu",
+      "base_url": "http://archive.ubuntu.com/ubuntu",
+      "branch_or_suite": "noble",
+      "component": "main",
+      "arch": "amd64"
+    },
+    {
+      "name": "CachyOS Official Repo",
+      "distro": "arch",
+      "base_url": "https://mirror.cachyos.org/repo/x86_64/cachyos",
+      "branch_or_suite": "cachyos",
+      "component": "cachyos",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Arch User Repository (AUR)",
+      "distro": "arch",
+      "base_url": "https://aur.archlinux.org",
+      "branch_or_suite": "aur",
+      "component": "aur",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 8 BaseOS",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/8/BaseOS/x86_64/os",
+      "branch_or_suite": "8",
+      "component": "BaseOS",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 8 AppStream",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/8/AppStream/x86_64/os",
+      "branch_or_suite": "8",
+      "component": "AppStream",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 8 PowerTools",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/8/PowerTools/x86_64/os",
+      "branch_or_suite": "8",
+      "component": "PowerTools",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 8 Updates Testing",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/8/updates-testing/x86_64",
+      "branch_or_suite": "8",
+      "component": "updates-testing",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 8 Server Full",
+      "distro": "cloudlinux",
+      "base_url": "https://cl-mirror.elitehost.co.za/swng/cloudlinux-x86_64-server-8.10",
+      "branch_or_suite": "8.10",
+      "component": "server",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 9 BaseOS",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/9/BaseOS/x86_64/os",
+      "branch_or_suite": "9",
+      "component": "BaseOS",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 9 AppStream",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/9/AppStream/x86_64/os",
+      "branch_or_suite": "9",
+      "component": "AppStream",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 9 Updates Testing",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/9/updates-testing/x86_64",
+      "branch_or_suite": "9",
+      "component": "updates-testing",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 9 Server Full",
+      "distro": "cloudlinux",
+      "base_url": "https://cl-mirror.elitehost.co.za/swng/cloudlinux-x86_64-server-9",
+      "branch_or_suite": "9",
+      "component": "server",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 7 OS",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/7/os/x86_64",
+      "branch_or_suite": "7",
+      "component": "os",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 7 Updates",
+      "distro": "cloudlinux",
+      "base_url": "https://repo.cloudlinux.com/cloudlinux/7/updates/x86_64",
+      "branch_or_suite": "7",
+      "component": "updates",
+      "arch": "x86_64"
+    },
+    {
+      "name": "CloudLinux 7 Server Full",
+      "distro": "cloudlinux",
+      "base_url": "https://cl-mirror.elitehost.co.za/swng/cloudlinux-x86_64-server-7",
+      "branch_or_suite": "7",
+      "component": "server",
+      "arch": "x86_64"
+    },
+    {
+      "name": "Sury Debian PHP (Bookworm)",
+      "distro": "debian",
+      "base_url": "https://packages.sury.org/php",
+      "branch_or_suite": "bookworm",
+      "component": "main",
+      "arch": "amd64"
+    },
+    {
+      "name": "Sury Debian PHP (Bullseye)",
+      "distro": "debian",
+      "base_url": "https://packages.sury.org/php",
+      "branch_or_suite": "bullseye",
+      "component": "main",
+      "arch": "amd64"
+    },
+    {
+      "name": "Sury Ubuntu PHP (Noble PPA)",
+      "distro": "ubuntu",
+      "base_url": "https://ppa.launchpadcontent.net/ondrej/php/ubuntu",
+      "branch_or_suite": "noble",
+      "component": "main",
+      "arch": "amd64"
+    },
+    {
+      "name": "Sury Ubuntu PHP (Jammy PPA)",
+      "distro": "ubuntu",
+      "base_url": "https://ppa.launchpadcontent.net/ondrej/php/ubuntu",
+      "branch_or_suite": "jammy",
+      "component": "main",
+      "arch": "amd64"
+    },
+    {
+      "name": "Sury Debian Apache2 (Bookworm)",
+      "distro": "debian",
+      "base_url": "https://packages.sury.org/apache2",
+      "branch_or_suite": "bookworm",
+      "component": "main",
+      "arch": "amd64"
+    }
+  ]
+}
