@@ -53,6 +53,5 @@ const manifest = {
 };
 
 fs.writeFileSync(path.join(__dirname, 'index.json'), JSON.stringify(manifest, null, 2) + '\n', 'utf8');
-fs.writeFileSync(path.join(__dirname, 'repositories.json'), JSON.stringify(manifest, null, 2) + '\n', 'utf8');
 
-console.log(`Successfully compiled ${compiledRepos.length} repositories across ${distros.length} distributions into index.json and repositories.json.`);
+console.log(`Successfully compiled ${compiledRepos.length} repositories across ${distros.length} distributions into index.json.`);
