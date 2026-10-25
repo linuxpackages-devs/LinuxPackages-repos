@@ -227,6 +227,46 @@
       "branch_or_suite": "bookworm",
       "component": "main",
       "arch": "amd64"
+    },
+    {
+      "name": "NGINX Official Stable (Debian Bookworm)",
+      "distro": "debian",
+      "base_url": "http://nginx.org/packages/debian",
+      "branch_or_suite": "bookworm",
+      "component": "nginx",
+      "arch": "amd64"
+    },
+    {
+      "name": "NGINX Official Mainline (Debian Bookworm)",
+      "distro": "debian",
+      "base_url": "http://nginx.org/packages/mainline/debian",
+      "branch_or_suite": "bookworm",
+      "component": "nginx",
+      "arch": "amd64"
+    },
+    {
+      "name": "NGINX Official Stable (Ubuntu Noble)",
+      "distro": "ubuntu",
+      "base_url": "http://nginx.org/packages/ubuntu",
+      "branch_or_suite": "noble",
+      "component": "nginx",
+      "arch": "amd64"
+    },
+    {
+      "name": "NGINX Official Mainline (Ubuntu Noble)",
+      "distro": "ubuntu",
+      "base_url": "http://nginx.org/packages/mainline/ubuntu",
+      "branch_or_suite": "noble",
+      "component": "nginx",
+      "arch": "amd64"
+    },
+    {
+      "name": "NGINX Official (RHEL/CloudLinux 9)",
+      "distro": "cloudlinux",
+      "base_url": "http://nginx.org/packages/rhel/9/x86_64",
+      "branch_or_suite": "9",
+      "component": "nginx",
+      "arch": "x86_64"
     }
   ]
 }
